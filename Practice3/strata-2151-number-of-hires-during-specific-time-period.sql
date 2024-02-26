@@ -12,7 +12,7 @@ Table: employees
 | id           | integer  |
 | first_name   | varchar  |
 | last_name    | varchar  |
-| last_name    | integer  |
+| salary       | integer  |
 | joining_date | datetime |
 | department   | varchar  |
 +--------------+----------+
