@@ -41,4 +41,5 @@ SELECT ROUND((SUM(item_count * order_occurrences) :: numeric)/ SUM(order_occurre
 SELECT ROUND(SUM(item_count * order_occurrences)/ SUM(order_occurrences), 1)  AS mean FROM items_per_order;
 sẽ gây ra lỗi ERROR: function round(double precision, integer) does not exist
 -> Sửa dùng CAST: SELECT ROUND(CAST(longitude AS numeric),2) FROM my_points; 
-hoặc SELECT ROUND(value::numeric, 2) FROM table_x; 
+hoặc SELECT ROUND(value::numeric, 2) FROM table_x
+-> AS datatype of (int*int) is int and int/int still int. However ROUND function only work with float (decimal) or numeric; 
